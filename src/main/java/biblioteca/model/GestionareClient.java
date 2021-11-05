@@ -15,6 +15,21 @@ public class GestionareClient extends Client{
 
 	}
 
+	public GestionareClient(ArrayList<Carte> cartiImprumutate, HashMap<Carte, Date> imprumutatDeLa, HashMap<Carte, Date> imprumutatPanaLa, Client client) {
+		this.cartiImprumutate = cartiImprumutate;
+		this.imprumutatDeLa = imprumutatDeLa;
+		this.imprumutatPanaLa = imprumutatPanaLa;
+		this.client = client;
+	}
+
+	public GestionareClient(String cnp, String nume, int varsta, ArrayList<Carte> cartiImprumutate, HashMap<Carte, Date> imprumutatDeLa, HashMap<Carte, Date> imprumutatPanaLa, Client client) {
+		super(cnp, nume, varsta);
+		this.cartiImprumutate = cartiImprumutate;
+		this.imprumutatDeLa = imprumutatDeLa;
+		this.imprumutatPanaLa = imprumutatPanaLa;
+		this.client = client;
+	}
+
 	public GestionareClient(String cnp, String nume, int varsta, ArrayList<Carte> cartiImprumutate, HashMap<Carte, Date> imprumutatDeLa, HashMap<Carte, Date> imprumutatPanaLa) {
 		super(cnp, nume, varsta);
 		this.cartiImprumutate = cartiImprumutate;
@@ -33,12 +48,12 @@ public class GestionareClient extends Client{
 		return cartiImprumutate;
 	}
 
-	public void setCartiImprumutate(ArrayList<Carte> cartiImprumutate) {
-		this.cartiImprumutate = cartiImprumutate;
+	public Client getClient(){
+		return client;
 	}
 
-	public Client getClient() {
-		return client;
+	public void setCartiImprumutate(ArrayList<Carte> cartiImprumutate) {
+		this.cartiImprumutate = cartiImprumutate;
 	}
 
 	public void setClient(Client client) {
@@ -78,13 +93,10 @@ public class GestionareClient extends Client{
 	@Override
 	public String toString() {
 		return "GestionareClient{" +
-				"cnp= " + client.getCnp() +
-				", nume= " + client.getNume() +
-				", varsta= " + client.getVarsta() +
+				client +
 				", cartiImprumutate= " + cartiImprumutate +
 				", imprumutatDeLa= " + imprumutatDeLa +
 				", imprumutatPanaLa= " + imprumutatPanaLa +
 				'}';
 	}
-
 }

@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Gestiunea Unei Biblioteci - Tema Master" />
+        <module name="GestionareBiblioteca" />
       </profile>
     </annotationProcessing>
   </component>

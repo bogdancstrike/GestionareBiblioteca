@@ -1,0 +1,5 @@
+[ {
+  "cnp" : "1",
+  "nume" : "bogdan",
+  "varsta" : 23
+} ]

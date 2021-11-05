@@ -1,0 +1,7 @@
+[ {
+  "idCarte" : 2,
+  "nume" : "n2",
+  "autor" : "n2",
+  "colectie" : "n2",
+  "editura" : "n2"
+} ]

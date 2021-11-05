@@ -37,5 +37,4 @@ public class Utils {
 		GestionareClient gestionareClient = new GestionareClient(client, carti, deLa, panaLa);
 		return gestionareClient;
 	}
-
 }
