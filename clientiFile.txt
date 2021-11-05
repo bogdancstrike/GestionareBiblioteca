@@ -1,5 +1,9 @@
 [ {
-  "cnp" : "1",
-  "nume" : "bogdan",
+  "cnp" : "1971216038084",
+  "nume" : "Bogdan",
   "varsta" : 23
+}, {
+  "cnp" : "2981110539142",
+  "nume" : "Maria",
+  "varsta" : 22
 } ]

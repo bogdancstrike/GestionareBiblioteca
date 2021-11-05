@@ -45,6 +45,39 @@ public class Main {
 				String[] arguments = comanda.split(" ");
 
 				switch (arguments[0]) {
+					case "afisare_comenzi":
+						System.out.println("creare_client cnp nume varsta");
+						System.out.println("creare_carte idCarte nume autor colectie editura");
+
+						System.out.println("\n");
+
+						System.out.println("afisare_clienti");
+						System.out.println("afisare_carti");
+
+						System.out.println("\n");
+
+						System.out.println("gestionare_client cnp idCarte dataDeCand dataPanaCand");
+						System.out.println("afisare_gestionare");
+						System.out.println("afisare_gestionare_client cnp");
+
+						System.out.println("\n");
+
+						System.out.println("afisare_carti_dupa_autor autor");
+						System.out.println("afisare_carti_dupa_editura editura");
+						System.out.println("afisare_carti_dupa_colectie colectie");
+
+						System.out.println("\n");
+
+						System.out.println("carti_imprumutate_de_la data");
+						System.out.println("carti_imprumutate_pana_la data");
+
+						System.out.println("\n");
+
+						System.out.println("sterge_carte idCarte");
+						System.out.println("sterge_client cnp");
+
+						System.out.println("\n");
+						break;
 					case "creare_client":
 						Client client = utils.creareClient(arguments[1], arguments[2], Integer.parseInt(arguments[3]));
 						clienti.add(client);
@@ -122,7 +155,6 @@ public class Main {
 					case "afisare_carti_dupa_colectie":
 						counter = 0;
 						String colectie = arguments[1];
-						System.out.println(colectie);
 						for (Carte c : carti) {
 							if (c.getColectie().equals(colectie)) {
 								System.out.println(c);
@@ -152,7 +184,7 @@ public class Main {
 						if (counter == 0) throw new NiciunRezultatGasit();
 						break;
 
-					case "carti_imprumutate_de_la":
+					case "carti_imprumutate_de_la": //BUG: NPE
 						counter = 0;
 						for (GestionareClient gc : gestionareClienti){
 							for (Carte carteCurenta : carti){
