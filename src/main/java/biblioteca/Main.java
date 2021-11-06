@@ -78,6 +78,15 @@ public class Main {
 
 						System.out.println("\n");
 						break;
+
+					case "generare_raport":
+						System.out.println("Raportul a fost generat.");
+						FileWriter raportFile = new FileWriter("raport.txt");
+						raportFile.write("In total sunt " + carti.size() + " carti inregistrate in sistem.\n");
+						raportFile.write("In totall sunt " + clienti.size() + " clienti inregistrati in sistem.");
+						raportFile.close();
+						break;
+
 					case "creare_client":
 						Client client = utils.creareClient(arguments[1], arguments[2], Integer.parseInt(arguments[3]));
 						clienti.add(client);
@@ -240,6 +249,11 @@ public class Main {
 						FileWriter gestiuneClientiFile = new FileWriter("gestiuneClientiFile.txt");
 						gestiuneClientiFile.write(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(gestionareClienti));
 						gestiuneClientiFile.close();
+
+						FileWriter raportFileOnExit = new FileWriter("raport.txt");
+						raportFileOnExit.write("In total sunt " + carti.size() + " carti inregistrate in sistem.\n");
+						raportFileOnExit.write("In totall sunt " + clienti.size() + " clienti inregistrati in sistem.");
+						raportFileOnExit.close();
 
 						System.out.println("\n\nDatele au fost salvate");
 						System.exit(0);
